@@ -8,11 +8,27 @@ def restar():
     b = float(input("Ingresa el segundo número: "))
     print(f"Resultado: {a - b}")
 
+def multiplicar():
+    a = float(input("Ingresa el primer número: "))
+    b = float(input("Ingresa el segundo número: "))
+    print(f"Resultado: {a * b}")
+
+def dividir():
+    a = float(input("Ingresa el primer número: "))
+    b = float(input("Ingresa el segundo número: "))
+    
+    if b == 0:
+        print("Error: no se puede dividir entre cero.")
+    else:
+        print(f"Resultado: {a / b}")
+
 def mostrar_menu():
     print("\n--- MENÚ ---")
     print("1. Sumar")
     print("2. Restar")
-    print("3. Salir")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir")
 
 def main():
     while True:
@@ -24,6 +40,10 @@ def main():
         elif opcion == "2":
             restar()
         elif opcion == "3":
+            multiplicar()
+        elif opcion == "4":
+            dividir()
+        elif opcion == "5":
             print("Saliendo del programa...")
             break
         else:
